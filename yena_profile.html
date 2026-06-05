@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yena_Profile</title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/b4099dc7c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/yena_profile.css">
+</head>
+
+<body>
+    <div class="mainpage">
+        <div class="header">
+            <div class="header01">
+                <a href="yena_main.html">
+                    <img src="yenalogo_pink.png" width="auto" height="100px" onmouseover="hover(this);"
+                        onmouseout="unhover(this);">
+                </a>
+            </div>
+            <div class="header01">
+                <div class="navbar">
+                    <a href="yena_profile.html">
+                        <ul class="headerNav">PROFILE</ul>
+                    </a>
+                    <a href="yena_album.html">
+                        <ul class="headerNav">ALBUM</ul>
+                    </a>
+                    <a href="yena_multimedia.html">
+                        <ul class="headerNav">NOTICE</ul>
+                    </a>
+                    <a href="yena_gallery.html">
+                        <ul class="headerNav">GALLERY</ul>
+                    </a>
+                    <a href="yena_schedule.html">
+                        <ul class="headerNav">SCHEDULE</ul>
+                    </a>
+                    <div></div>
+                </div>
+            </div>
+            <div class="navbar_logo">
+                <a href=javascript:;" class="navbar__toggleBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mnavbar">
+            <a href="yena_profile.html">
+                <ul class="headerNav">PROFILE</ul>
+            </a>
+            <a href="yena_album.html">
+                <ul class="headerNav">ALBUM</ul>
+            </a>
+            <a href="yena_multimedia.html">
+                <ul class="headerNav">NOTICE</ul>
+            </a>
+            <a href="yena_gallery.html">
+                <ul class="headerNav">GALLERY</ul>
+            </a>
+            <a href="yena_schedule.html">
+                <ul class="headerNav">SCHEDULE</ul>
+            </a>
+        </div>
+        <div class="all_contents">
+            <div class="imagebox" style="max-width: 100%">
+                <!-- <img src="yena_profile01.jpg" alt="" width="100%"> -->
+            </div>
+        </div>
+        <div class="secondHeader">
+            <div class="sheaderNav">PROFILE</div>
+        </div>
+        <div class="profileinfo">
+            <div class="name">YENA</div>
+            <div class="photonText">
+                <div class="photo"><img src="yena_photo.jpg" alt="" width="90%"></div>
+                <div class="text">최예나<br><span id="text01"> ( Choi yena )</span>
+                    <br><br><br>출생<br><span id="text02">1999.09.29</span>
+                    <br><br><br>소속<br><span id="text01">(前) IZ*ONE</span><br><br><span id="text01">위에화
+                        엔터테인먼트</span><br><span id="text02">Yuehwa
+                        Entertainment.</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="ftext">made by <a href="https://www.instagram.com/meister._yi/" target="_blank"><span id="ftext01">
+                        meister_yi</span></a></div>
+            <div id="ftext02">2022 Network Media Final Project_YENA Fan Page</div>
+        </div>
+
+    </div>
+    <a href="#" class="btn_gotop">
+        <img src="topbtn.png" alt="" width="50vw">
+    </a>
+
+
+    <script>
+        function hover(element) {
+            element.setAttribute('src', 'yenalogo01.png');
+        }
+        function unhover(element) {
+            element.setAttribute('src', 'yenalogo_pink.png');
+        }
+    </script>
+    <script>
+        const toggleBtn = document.querySelector('.navbar_logo');
+        const menu = document.querySelector('.mnavbar');
+
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        })
+    </script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('.btn_gotop').show();
+            } else {
+                $('.btn_gotop').hide();
+            }
+        });
+        $('.btn_gotop').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 400);
+            return false;
+        });
+    </script>
+</body>
+
+</html>

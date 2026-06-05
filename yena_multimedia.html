@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yena_Notice</title>
+
+    <script src="https://kit.fontawesome.com/b4099dc7c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/yena_multimedia.css">
+</head>
+
+<body>
+    <div class="mainpage">
+        <div class="header">
+            <div class="header01">
+                <a href="yena_main.html">
+                    <img src="yenalogo_pink.png" width="auto" height="100px" onmouseover="hover(this);"
+                        onmouseout="unhover(this);">
+                </a>
+            </div>
+            <div class="header01">
+                <div class="navbar">
+                    <a href="yena_profile.html">
+                        <ul class="headerNav">PROFILE</ul>
+                    </a>
+                    <a href="yena_album.html">
+                        <ul class="headerNav">ALBUM</ul>
+                    </a>
+                    <a href="yena_multimedia.html">
+                        <ul class="headerNav">NOTICE</ul>
+                    </a>
+                    <a href="yena_gallery.html">
+                        <ul class="headerNav">GALLERY</ul>
+                    </a>
+                    <a href="yena_schedule.html">
+                        <ul class="headerNav">SCHEDULE</ul>
+                    </a>
+                    <div></div>
+                </div>
+            </div>
+            <div class="navbar_logo">
+                <a href=javascript:;" class="navbar__toggleBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mnavbar">
+            <a href="yena_profile.html">
+                <ul class="headerNav">PROFILE</ul>
+            </a>
+            <a href="yena_album.html">
+                <ul class="headerNav">ALBUM</ul>
+            </a>
+            <a href="yena_multimedia.html">
+                <ul class="headerNav">NOTICE</ul>
+            </a>
+            <a href="yena_gallery.html">
+                <ul class="headerNav">GALLERY</ul>
+            </a>
+            <a href="yena_schedule.html">
+                <ul class="headerNav">SCHEDULE</ul>
+            </a>
+        </div>
+        <div class="all_contents">
+            <div class="imagebox" style="max-width: 100%">
+                <!-- <img src="yena_profile01.jpg" alt="" width="100%"> -->
+            </div>
+        </div>
+        <div class="secondHeader">
+            <div class="sheaderNav">NOTICE</div>
+        </div>
+        <div class="multimediafield">
+            <div class="noticehead">
+                <input type="text" class="searchtab" placeholder="내용 검색하기">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" id="searchbtn"
+                    onclick="clearInput()">
+            </div>
+            <div class="noticecontent">
+                <div class="headertext">
+                    <span class="box">번호</span>
+                    <span class="box">제목</span>
+                    <span class="box">작성자</span>
+                    <span class="box">등록일</span>
+                    <span class="box">조회</span>
+                </div>
+                <ul class="noticetext">
+                    <span class="box">6</span>
+                    <span class="box"><a href="">안녕하세</a></span>
+                    <span class="box">성자작</span>
+                    <span class="box">12.25</span>
+                    <span class="box">923</span>
+                </ul>
+                <ul class="noticetext">
+                    <span class="box">5</span>
+                    <span class="box"><a href="">안하세요</a></span>
+                    <span class="box">자성작</span>
+                    <span class="box">12.25</span>
+                    <span class="box">923</span>
+                </ul>
+                <ul class="noticetext">
+                    <span class="box">4</span>
+                    <span class="box"><a href="">녕하세요</a></span>
+                    <span class="box">작자성</span>
+                    <span class="box">12.23</span>
+                    <span class="box">929</span>
+                </ul>
+                <ul class="noticetext">
+                    <span class="box">3</span>
+                    <span class="box"><a href="">안녕하세</a></span>
+                    <span class="box">성작자</span>
+                    <span class="box">12.22</span>
+                    <span class="box">929</span>
+                </ul>
+                <ul class="noticetext">
+                    <span class="box">2</span>
+                    <span class="box"><a href="">안녕세요</a></span>
+                    <span class="box">작자성</span>
+                    <span class="box">12.20</span>
+                    <span class="box">929</span>
+                </ul>
+                <ul class="noticetext">
+                    <span class="box">1</span>
+                    <span class="box"><a href="">안녕하요</a></span>
+                    <span class="box">작성자</span>
+                    <span class="box">12.20</span>
+                    <span class="box">929</span>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="ftext">made by <a href="https://www.instagram.com/meister._yi/" target="_blank"><span id="ftext01">
+                        meister_yi</span></a></div>
+            <div id="ftext02">2022 Network Media Final Project_YENA Fan Page</div>
+        </div>
+    </div>
+    <a href="#" class="btn_gotop">
+        <img src="topbtn.png" alt="" width="50vw">
+    </a>
+
+    <script>
+        function hover(element) {
+            element.setAttribute('src', 'yenalogo01.png');
+        }
+        function unhover(element) {
+            element.setAttribute('src', 'yenalogo_pink.png');
+        }
+    </script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        const toggleBtn = document.querySelector('.navbar_logo');
+        const menu = document.querySelector('.mnavbar');
+
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        })
+    </script>
+    <script>
+        function clearInput() {
+            var el = document.getElementsByClassName('searchtab');
+            for (var i = 0; i < el.length; i++) {
+                el[i].value = '';
+            }
+        }
+    </script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('.btn_gotop').show();
+            } else {
+                $('.btn_gotop').hide();
+            }
+        });
+        $('.btn_gotop').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 400);
+            return false;
+        });
+    </script>
+</body>
+
+</html>
